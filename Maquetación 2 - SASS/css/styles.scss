@@ -1,0 +1,62 @@
+/* ---------------------------------------------------------------------------------------- */
+
+/* Módulos en SASS */
+
+/* Permite importar información de otros .scss, importante hacerlo al principio de la hoja */
+
+@use 'box';
+
+/* ---------------------------------------------------------------------------------------- */
+
+/* Variables */
+
+$fuente-tipica: sans-serif, Helvetica, Arial;
+$color-fondo: #eaeaea;
+$color-letra: #5b5b5b;
+$color-secundario: #929292;
+
+body{
+    background-color: $color-fondo;
+}
+
+h1{
+    font-family: $fuente-tipica;
+    color: $color-letra;
+}
+
+p{
+    color: $color-secundario;
+}
+/* ---------------------------------------------------------------------------------------- */
+
+/* Anidación */
+
+.caja{
+    border: 1px solid black;
+    width: 500px;
+    margin: 0px auto;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+
+    h1{
+        color: #505050;
+    }
+    p{
+        color: #6c6c6c;
+    }
+    .info{
+        color: #ababab;
+    }
+    .autor{
+        font-size: 15px;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+/* ---------------------------------------------------------------------------------------- */
+
+/* Mixins (Funciones) */
+
+
