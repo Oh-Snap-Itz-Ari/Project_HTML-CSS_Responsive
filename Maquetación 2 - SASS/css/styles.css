@@ -50,5 +50,133 @@ p {
 
 /* ---------------------------------------------------------------------------------------- */
 /* Mixins (Funciones) */
+.caja {
+  border: 3px solid blue;
+  border-radius: blue;
+  box-shadow: 0px 0px 5px #5b5b5b;
+}
+
+.listado {
+  border: 5px solid #ccc;
+  border-radius: #ccc;
+  box-shadow: 0px 0px 5px black;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/* Herencia - Código CSS con estilos */
+.alert-success, .alert-danger, .alert {
+  border: 1px solid gray;
+  background: #eee;
+  color: black;
+  padding: 10px;
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.alert-danger {
+  color: red;
+  border-color: red;
+}
+
+.alert-success {
+  color: green; /* Heredan información de alert-normal y permite modificar lo que queremos */
+  border-color: green;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/* Operadores - Realizar operaciones matemáticas en CSS */
+.clearfix {
+  clear: both;
+}
+
+h1 {
+  /* Imprime el resultado por consola */
+  font-size: 24px;
+}
+
+.cajas {
+  width: 900px;
+  margin: 0px auto;
+}
+
+.caja {
+  width: 22.2222222222%; /* Realiza la operación y la asigna al width de la caja */
+  float: left;
+  margin: 20px;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/* Ciclos Condicionales */
+/* If */
+h1 {
+  color: lightblue;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/* Ciclos iterativos */
+/* For */
+.listado ul li:nth-child(1) {
+  font-size: calc(1px + 10px);
+  color: orange;
+  list-style: none;
+}
+
+.listado ul li:nth-child(2) {
+  font-size: calc(2px + 10px);
+  color: orange;
+  list-style: none;
+}
+
+.listado ul li:nth-child(3) {
+  font-size: calc(3px + 10px);
+  color: orange;
+  list-style: none;
+}
+
+.listado ul li:nth-child(4) {
+  font-size: calc(4px + 10px);
+  color: orange;
+  list-style: none;
+}
+
+.listado ul li:nth-child(5) {
+  font-size: calc(5px + 10px);
+  color: orange;
+  list-style: none;
+}
+
+.listado ul li:nth-child(6) {
+  font-size: calc(6px + 10px);
+  color: orange;
+  list-style: none;
+}
+
+.listado ul li:nth-child(7) {
+  font-size: calc(7px + 10px);
+  color: orange;
+  list-style: none;
+}
+
+.listado ul li:nth-child(8) {
+  font-size: calc(8px + 10px);
+  color: orange;
+  list-style: none;
+}
+
+.listado ul li:nth-child(9) {
+  font-size: calc(9px + 10px);
+  color: orange;
+  list-style: none;
+}
+
+.listado ul li:nth-child(10) {
+  font-size: calc(10px + 10px);
+  color: orange;
+  list-style: none;
+}
+
+/* Each */
+/* While */
 
 /*# sourceMappingURL=styles.css.map */
