@@ -1,0 +1,32 @@
+/* Variables */
+/* Se crea la variable b y que dentro de esta se almacene en Body */
+body {
+  background-color: lightblue;
+}
+h1 {
+  font-family: Arial;
+}
+/* Anidación */
+.informacion ul a {
+  color: white;
+  font-size: 18px;
+}
+/* Mixins */
+.informacion {
+  box-shadow: 0px 0px 5px black;
+  text-shadow: 0px 0px 5px #ccc;
+}
+/* Operadores */
+h1 {
+  font-size: 37px;
+}
+/* Mixins Condicionales */
+h1 {
+  color: blue;
+  /* No cambie el color del texto ya que tiene .textoNegro en false */
+}
+/* Mixins iterativos (Bucles)*/
+.informacion {
+  height: 900px;
+  height: 180px;
+}

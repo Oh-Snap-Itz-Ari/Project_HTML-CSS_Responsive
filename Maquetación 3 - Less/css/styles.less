@@ -1,0 +1,64 @@
+/* Variables */
+
+@bgcolor: lightblue;
+@font: Arial;
+@b: body; /* Se crea la variable b y que dentro de esta se almacene en Body */
+
+@{b}{
+    background-color: @bgcolor;
+}
+
+h1{
+    font-family: @font;
+}
+
+/* Anidación */
+
+.informacion{
+    ul{
+        a{
+            color: white;
+            font-size: 18px;
+        }
+    }
+}
+
+/* Mixins */
+
+.sombras(@size){
+    box-shadow: 0px 0px @size black;
+    text-shadow: 0px 0px @size #ccc;
+}
+
+.informacion{
+    .sombras(5px);
+}
+
+/* Operadores */
+
+h1{
+    font-size: 30px + 7px;
+}
+
+/* Mixins Condicionales */
+
+.textoNegro (@value) when (@value=true) { /* Se puede ajustar, digamos @value=black o algo similar */
+    color: black;
+}
+
+h1{
+    color: blue;
+    .textoNegro(false); /* No cambie el color del texto ya que tiene .textoNegro en false */
+}
+
+/* Mixins iterativos (Bucles)*/
+
+.loop(@cont) when (@cont > 0){
+    .loop(@cont -1);
+    height: (900px/@cont);
+}
+
+.informacion {
+    height: 900px;
+    .loop(5);
+}
