@@ -1,0 +1,92 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h3{
+    font-weight: normal;
+}
+
+#layout{
+    display: flex;  /* Relacionado al Flexbox, permite que se posicionen uno al lado del otro y toma
+    un width del 100% (Ancho máximo que permita la caja que lo contenga)*/
+    /* display: inline-flex;  Relacionado al Flexbox, se adapta al contenido que lleva dentro, el
+    width se convierte en un width automático y se adapta al contenido que lleva */
+    /* flex-direction: column;  Permite especificar como queremos que se almacene la información
+    dentro de la caja que lo contiene, por defecto viene como row (Fila) */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; Permite que los elementos que sobrepasan la caja se posicionen debajo y no
+    se salgan de la caja que los contiene, por defecto viene nowrap */
+    flex-flow: row wrap; /* Resume lo de las lineas de flex-direction y flex-wrap */
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.box{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    border: 2px solid #222;
+    margin: 10px;
+    background: #ccc;
+    color: #222;
+    font-weight: normal;
+}
+
+.red{
+    order: 1; /* El order permite posicionar los elementos como queramos, para este caso se 
+    posicionan primero los impares en orden ascendente y luego los pares */
+    background: lightcoral;
+}
+
+.green{
+    order: 7; 
+    background: lightgreen;
+}
+
+.blue{
+    order: 2;
+    background: lightskyblue;
+}
+
+.orange{
+    order: 8;
+    background: lightsalmon;
+}
+
+.yellow{
+    order: 3;
+    background: lightgoldenrodyellow;
+}
+
+.pink{
+    order: 9;
+    background: lightpink;
+}
+
+.cyan{
+    order: 4;
+    background: lightcyan;
+}
+
+.gray{
+    order: 10;
+    background: lightgray;
+}
+
+.seagreen{
+    order: 5;
+    background: lightseagreen;
+}
+
+.steelblue{
+    order: 11;
+    background: lightsteelblue;
+}
+
+.lategrey{
+    order: 6;
+    background: lightslategrey;
+}
+
