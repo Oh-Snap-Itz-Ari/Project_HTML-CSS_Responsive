@@ -1,4 +1,5 @@
 body{
+    --azulclaro: lightskyblue; /* Variables en CSS, sin necesidad de Preprocesador */
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
@@ -24,9 +25,17 @@ h3{
     se salgan de la caja que los contiene, por defecto viene nowrap */
 
     flex-flow: row wrap; /* Resume lo de las lineas de flex-direction y flex-wrap */
+    justify-content: space-around; /* Permite ajustar el contenido del layout según la condición
+    (Horizontal), por defecto viene en flex-start (Izquierda) */
+
+    height: 425px;
+    align-items: flex-start; /* Permite ajustar el contenido del layout según la condición
+    (Vertical), ya que por defecto los elementos tomarian el 100% del height de la caja 
+    que los contiene */
 
     border: 2px solid black;
     padding: 5px;
+    
 }
 
 .box{
@@ -34,8 +43,8 @@ h3{
     dentro del layout sino dentro de los elementos que contiene, en este caso las cajas. Normalmente
     se pone como 1 para que cada elemento (caja) ocupe el mismo espacio dentro del layout */
 
-    flex-basis: 25%; /* Permite establecer el tamaño minimo que debe de tener cada 
-    una de las cajas, en este caso decimos que cada una ocuparia un width del 25% */
+    /* flex-basis: calc((100%/3) - 65px); Permite establecer el tamaño minimo que debe de tener cada 
+    una de las cajas, en este caso decimos que cada una ocuparia un width */
     
     font-size: 20px;
     font-weight: bold;
@@ -51,7 +60,7 @@ h3{
 .red{
     /* flex-grow: 4;  Se puede modificar el flex-grow para que sea un poco más ancho que los otros
     que tienen el flex-grow de 1  */
-    flex-basis: calc((100%/3) - 44px);
+    align-self: flex-start; /* Permite posicional verticalmente solo un elemento */
     order: 1; /* El order permite posicionar los elementos como queramos, para este caso se 
     posicionan primero los impares en orden ascendente y luego los pares */
     background: lightcoral;
@@ -61,32 +70,39 @@ h3{
 .green{
     /* flex-shrink: 0;  Propiedad opuesta al flex-grow, permite disminuir el tamaño de la caja */
     /* flex-grow: 0; */
-    flex-basis: calc((100%/2) - 80px);
+    /* flex-basis: calc((100%/2) - 65px); */
+    align-self: center;
     order: 4; 
     background: lightgreen;
-    
 }
 
 .blue{
-    flex-basis: calc((100%/3) - 44px);
     order: 2;
-    background: lightskyblue;
+    margin-top: 95px;
+    background: var(--azulclaro)
 }
 
 .orange{
+    /* flex-basis: calc((100%/2) - 65px); */
+    align-self: center;
+    margin-top: 185px;
     order: 5;
     background: lightsalmon;
+    
 }
 
 .yellow{
     /* flex-shrink: 0; */
     /* flex-grow: 0; */
-    flex-basis: calc((100%/3) - 44px);
+    align-self: center;
     order: 3;
     background: lightgoldenrodyellow;
+}
     
 .pink{
     /* flex-grow: 4; */
+    /* flex-basis: calc((100%) - 65px); */
+    align-self: flex-end;
     order: 6;
     background: lightpink;
 }
